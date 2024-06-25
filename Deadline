@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t ;cin >> t;
+    while(t--){
+        ll n,d;cin >> n >> d;
+        ll x=sqrt(d);
+        x=x-1;
+        ll low=n+1;
+        f(i,x-1,x+2){
+            if(i>=0){if(d%(i+1)==0){
+                low=min(low,i+d/(i+1));
+            }
+            else {ll x=d/(i+1);low=min(low,i+x+1);}
+            }
+            
+        }
+        if(low==(n+1)) cout << "NO" << '\n';
+        else cout << "YES" << '\n';
+            
+    }
+    
+}
