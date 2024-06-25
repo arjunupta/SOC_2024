@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        string s;cin >> s;
+        vector<ll> a(5);
+        a[0]=s[0];a[1]=s[1];a[3]=s[3];a[4]=s[4];
+        a[0]=a[0]-48;a[1]=a[1]-48;a[3]=a[3]-48;a[4]=a[4]-48;
+        if(a[0]==0){
+            if(a[1]==0){
+                a[0]=1;a[1]=2;
+                cout << a[0] << a[1] << ":" << a[3] << a[4] << " " << "AM" << '\n';
+            }
+            else cout << s << " " << "AM" << '\n';
+        }
+        else if(a[0]==1){
+            if(a[1]<2) cout << s << " " << "AM" << '\n';
+            else if(a[1]==2) cout << s << " " << "PM" << '\n';
+            else{
+                a[0]=0;a[1]=a[1]-2;
+                cout << a[0] << a[1] << ":" << a[3] << a[4] << " " << "PM" << '\n';
+            }
+        }
+        else{
+            if(a[1]<=1){
+                a[0]=0;a[1]=a[1]+8;
+                cout << a[0] << a[1] << ":" << a[3] << a[4] << " " << "PM" << '\n';
+            }
+            else{
+                a[0]=1;a[1]=a[1]-2;
+                cout << a[0] << a[1] << ":" << a[3] << a[4] << " " << "PM" << '\n';
+            }
+        }
+    }
+}
