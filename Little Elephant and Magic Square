@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll high=0,sum,x;
+    vector<ll> a(3),b(3),c(3);
+    f(i,0,3) cin >> a[i];
+    f(i,0,3) cin >> b[i];
+    f(i,0,3) cin >> c[i];
+    a[0]=(b[2]+c[1])/2;
+    b[1]=(a[2]+c[0])/2;
+    c[2]=(a[1]+b[0])/2;
+    f(i,0,3) cout << a[i] << " ";
+    cout << '\n';
+    f(i,0,3) cout << b[i] << " ";
+    cout << '\n';
+    f(i,0,3) cout << c[i] << " ";
+    cout << '\n';
+    
+    
+}
