@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n;cin >> n;
+    vector<ll> a(n);
+    f(i,0,n) cin >> a[i];
+    if(n==1){
+        cout << 1 << '\n';return 0;
+    }
+    ll high=2,x=2;
+    f(i,2,n){
+        if(a[i]==(a[i-1]+a[i-2])){x++;high=max(x,high);}
+        else x=2;
+    }
+    cout << high << '\n';
+    
+}
