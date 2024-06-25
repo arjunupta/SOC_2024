@@ -1,0 +1,31 @@
+Problem set : 
+tinyurl.com/socproblemset (Complete Problem-set)
+https://neetcode.io/roadmap 
+cses.fi/problemset
+SoC contest : 
+https://www.hackerrank.com/soc-2024-1 
+
+Template, Time Complexity and other basics : https://docs.google.com/document/d/1SDL9qejxpne9NZ9Fahzec9fhFdnfVBspnK-LfI0m6Ms/edit?usp=sharing
+
+Reading References : 
+
+CSES Handbook : https://cses.fi/book/book.pdf 
+
+This is THE BOOK.
+
+You have everything in it, to get familiarised with the CP World.
+From templates to STL,From greedy to DP, From Graphs to Trees. Everything.
+(you will hear these words in a few days, so don't worry if this is the first time you are hearing of it)
+Although it has everything, this book is mainly useful for familiarising yourself with CP, later on,
+this won't be sufficient.
+
+USACO Guide : https://usaco.guide/general/using-this-guide?lang=cpp 
+USACO is USA computing olympiad, so this website has some stuff specific about those contests 
+and their weird submission formats too, you can safely ignore that, leaving that this website is very good
+
+Jeffe Erickson (for theoretical DSA but in a CP fashion): https://tinyurl.com/soc-jeffe
+
+Tardos(for pure theoretical DSA) : https://tinyurl.com/soc-tardos 
+
+
+
