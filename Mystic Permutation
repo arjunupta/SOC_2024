@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+void swap(ll*a,ll *b){
+    ll temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n;cin >> n;
+        vector<ll> p(n);
+        f(i,0,n) cin >> p[i];
+        vector<ll> q=p;
+        sort(q.begin(),q.end());
+        if(n==1){
+            cout << -1 << '\n';
+        }
+        else{f(i,0,n){
+            if(p[i]==q[i]){
+                if(i==(n-1)) swap(&q[i-1],&q[i]);
+                else swap(&q[i],&q[i+1]);
+            }
+        }
+        f(i,0,n) cout << q[i] << " ";
+        cout << '\n';
+        }
+    }
+}
