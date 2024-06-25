@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n;cin >> n;
+        if(n>=53){
+            n=n-52;n=n+96;
+            char x=n;
+            cout << x << "zz" << '\n';
+        }
+        else if(n>=28){
+            n=n-27;n=n+96;
+            char x=n;
+            cout << 'a' << x << 'z' << '\n';
+        }
+        else{
+            n=n-2;n=n+96;
+            char x=n;
+            cout << "aa" << x << '\n';
+        }
+        
+    }
+}
