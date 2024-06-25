@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    vector<string> s(4);
+    f(i,0,4) cin >> s[i];
+    ll x=0;
+    if(s[0]==s[2] && s[1]==s[3]){
+        f(i,0,4){
+            if(s[0][i]!=s[1][i]) x++;
+        }
+        
+    }
+    if(x==4){
+        cout << "NO" << '\n';return 0;
+    }
+    ll y=0;
+    f(i,0,4){
+        if(s[i][0]==s[i][2] && s[i][1]==s[i][3]) y++;
+    }
+    ll k=0;
+    if(y==4){
+        f(i,0,4){
+            if(s[i][0]!=s[i][1]) k++;
+        }
+        
+    }
+    if(k==4){
+        cout << "NO" << '\n';return 0;
+    }
+    cout << "YES" << '\n';
+}
