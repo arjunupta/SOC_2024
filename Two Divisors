@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+ll gcd(ll x,ll y){
+    ll r=x%y;
+    while(r!=0){
+        r=x%y;
+        x=y;y=r;
+        r=x%y;
+    }
+    return y;
+    
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll a,b;cin >> a >> b;
+        ll k=(a*b)/gcd(b,a);
+        if(b%a==0){
+            cout << k*(b/a) << '\n';
+        }
+        else cout << k << '\n';
+        
+        
+    }
+}
