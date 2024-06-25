@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+void swap(ll*a,ll *b){
+    ll temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,x=-1,y=-1;cin >> n;
+        vector<ll> p(n);
+        f(i,0,n) cin >> p[i];
+        f(i,0,n-1){
+            if(p[i]<p[i+1]){
+                x=i;break;
+            }
+        }
+        f(i,x+1,n-1){
+            if(p[i]>p[i+1]){
+                y=i;break;
+            }
+        }
+        if(y==-1 || y==0) cout << "NO" << '\n';
+        else{
+            cout << "YES" << '\n';
+            cout << y << " " <<  y+1 << " " << y+2 << '\n';
+        }
+        
+    }
+}
