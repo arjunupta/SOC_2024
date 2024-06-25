@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll k,q;cin >> k >> q;
+        vector<ll> a(k);
+        f(i,0,k) cin >> a[i];
+        while(q--){ 
+            ll n,x;cin >> n;
+            while(n>=a[0]){
+                x=upper_bound(a.begin(),a.end(),n)-a.begin();
+                n=n-(x);
+            }
+            cout << n << " ";
+        }
+        cout << '\n';
+        
+        
+    }
+}
