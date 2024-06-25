@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,x=0;cin >> n;
+        string s;cin >> s;
+        string a;
+        f(i,0,n-2){
+            a=s.substr(i,3);
+            if(a=="map" || a=="pie") x++;
+        }
+        f(i,0,n-4){
+            a=s.substr(i,5);
+            if(a=="mapie") x--;
+        }
+        cout << x << '\n';
+    }
+}
