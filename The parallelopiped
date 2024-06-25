@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    double x,y,z;
+    cin >> x >> y >> z;
+    double p=4*(sqrt((z*x)/y)+sqrt((x*y)/z)+sqrt((y*z)/x));
+    cout << p << '\n';
+    
+}
