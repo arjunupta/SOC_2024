@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ll n;cin >> n;
+    if(n%2==1) cout << 0 << '\n';
+    else{
+        ll x=1;
+        f(i,0,(n/2)){
+            x=x*2;
+        }
+        cout << x << '\n';
+    }
+}
