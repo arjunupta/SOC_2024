@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n;cin >> n;
+        ll a=1,b=1,c;
+        f(i,2,sqrt(n)+1){
+            if(n%i==0){a=i;n=n/i;break;}
+        }
+        f(j,a+1,sqrt(n)+1){
+            if(n%j==0){b=j;c=(n/j);break;}
+        }
+        if(a==1 || b==1 || a==b || b==c || a==c) cout << "NO" << '\n';
+        else {
+            cout << "YES" << '\n';
+            cout << a << " " << b << " " << c << '\n';
+        }
+        
+    }
+}
