@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n,a,b,c;
+    cin >> n;
+    vector<ll> x(3);
+    cin >> x[0] >> x[1] >> x[2];
+    sort(x.begin(),x.end());
+    c=x[0];b=x[1];a=x[2];
+    ll y=0;
+    f(i,0,n){
+        f(j,0,n){
+            ll p=n-a*j-b*i;
+            if(p<0) break;
+            if(p%c==0) y=max(y,(i+j+(p/c)));
+
+        }
+    }
+    cout << y << '\n';
+    
+}
