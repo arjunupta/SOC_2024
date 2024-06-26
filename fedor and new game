@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+ll num(ll n){
+    ll a=0;
+    while(n>0){
+        if(n%2!=0) a++;
+        n=n/2;
+    }
+    return a;
+}
+int main(){
+    ll n,m,k;
+    cin >> n >> m >> k;
+    vector<ll> p(m+1);
+    f(i,0,(m+1)){
+        cin >> p[i];
+    }
+    ll y=0;
+    f(i,0,m){
+        if(num(p[i]^p[m])<=k) y++;
+    }
+    cout << y << "\n";
+    
+}
