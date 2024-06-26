@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,a,b;
+        cin >> n >> a >> b;
+        ll x=2*(b-a)+1;
+        if(x<=0) cout << n*a << '\n';
+        else{
+            ll y=min(n,b);
+            if(y<=(b-a)) cout << -((y*y)/2)+((x*y)/2)+n*a << '\n';
+            else cout << -(((b-a)*(b-a))/2)+((x*(b-a))/2)+n*a << '\n';
+        }
+    }
+}
