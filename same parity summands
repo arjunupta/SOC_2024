@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll t;
+    cin >> t;
+    f(i,0,t){
+        ll n,k;
+        cin >> n >> k;
+        if(n%2==k%2){
+            if(n>=k){
+                cout << "YES" << "\n";
+                f(i,0,(k-1)){
+                    cout << 1 << " ";
+                }
+                cout << n-k+1 << "\n";
+            }
+            else{
+                cout << "NO" << "\n";
+            }
+            
+        }
+        else if(n%2==0 && k%2==1){
+            if(n>=2*k){
+                cout << "YES" << "\n";
+                f(i,0,(k-1)){
+                    cout << 2 << " ";
+                }
+                cout << (n-2*k+2) << "\n";
+            }
+            else{
+                    cout << "NO" << "\n";
+            
+                
+            }
+        }
+        else{
+            cout << "NO" << "\n";
+        }
+        
+        
+        
+        
+    }
+    
+}
+    
