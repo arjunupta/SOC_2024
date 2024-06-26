@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,k;cin >> n >> k;
+        string s;
+        cin >> s;
+        string a;
+        a=s.substr(0,k);
+        ll x=0;
+        f(i,0,k){
+            if(a[i]=='W') x++;
+        }
+        ll low=x;
+        f(i,k,n){
+            if(s[i]=='W') x++;
+            if(s[i-k]=='W') x--;
+            low=min(x,low);
+        }
+        cout << low << '\n';
+    }
+}
