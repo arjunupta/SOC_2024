@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll t;
+    cin >> t;
+    f(i,0,t){
+        ll n,f,k;
+        cin >> n >> f >> k;
+        vector<ll> a(n);
+        f(j,0,n){
+            cin >> a[j];
+        }
+        vector<ll> b=a;
+        sort(b.rbegin(),b.rend());
+        ll o=0;
+        f(j,0,k){
+            if(b[j]==a[f-1]){
+                if((b[j]==b[j+1])&&(b[j+1]==b[k])){
+                    cout << "MAYBE" << "\n";break;
+                }
+                else{
+                    cout << "YES" << "\n";break;
+                }
+            }
+            else o++;
+        }
+        if(o==k){
+            cout << "NO" << "\n";
+        }
+    }
+    
+}
+        
