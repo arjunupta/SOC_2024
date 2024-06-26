@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ll n;
+    cin >> n;
+    ll x=0;
+    ll y=1;
+        f(i,0,n){
+            if(n>x){
+                x=x+5*pow(2,i);
+                y=pow(2,i);
+            }
+            else break;
+            
+        }
+    ll z=(x-n)/y;
+    if(z==0){
+        cout << "Howard" << "\n";
+    }
+    else if(z==1){
+        cout << "Rajesh" << "\n";
+    }
+    else if(z==2){
+        cout << "Penny" << "\n";
+    }
+    else if(z==3){
+        cout << "Leonard" << "\n";
+    }
+    else{
+        cout << "Sheldon" << "\n";
+    }
+        
+}
