@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n;cin >> n;
+    vector<pair<ll,ll>> a(n);
+    f(i,0,n){
+        cin >> a[i].first >> a[i].second;
+    }
+    sort(a.begin(),a.end());
+    f(i,0,n-1){
+        if(a[i].first<a[i+1].first && a[i].second>a[i+1].second){
+            cout << "Happy Alex" << '\n';return 0;
+        } 
+    }
+    cout << "Poor Alex" << '\n'; 
+}
+    
+    
