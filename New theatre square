@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,m,x,y,sum=0;cin >> n >> m >> x >> y;
+        f(j,0,n){
+            string s;cin >> s;
+            ll i=0;
+            ll a=0,b=0;
+            if(2*x>y){
+                while(i<m){
+                if(s[i]=='.'){
+                    if(s[i+1]=='.'){
+                        b++;i=i+2;
+                    }
+                    else{
+                        a++;i=i+2;
+                    }
+                }
+                else i++;
+            }
+            sum=sum+a*x+b*y;
+            }
+            else{
+                f(i,0,m){
+                    if(s[i]=='.') a++;
+                }
+                sum=sum+a*x;
+            }
+            
+            
+            
+        }
+        cout << sum << '\n';
+        
+    }
+}
