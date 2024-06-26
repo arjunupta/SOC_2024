@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n;cin >> n;
+        vector<ll> a(n);
+        vector<ll> c(3);
+        c[0]=0;c[1]=0;c[2]=0;
+        f(i,0,n) cin >> a[i];
+        f(i,0,n){
+            if(a[i]%3==0) c[0]++;
+            else if(a[i]%3==1) c[1]++;
+            else c[2]++;
+        }
+        ll high=c[1]-c[0];
+        high=max(high,c[2]-c[1]);
+        high=max(high,c[0]-c[2]);
+        cout << high << '\n';
+        
+    }
+
+
+
+}
