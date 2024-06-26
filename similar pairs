@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll t;
+    cin >>t;
+    f(i,0,t){
+        ll n;
+        cin >> n;
+        vector<ll> a(n);
+        f(i,0,n){
+            cin >> a[i];
+        }
+        sort(a.begin(),a.end());
+        ll e=0;
+        f(i,0,n){
+            if(a[i]%2==0) e++;
+        }
+        if(e%2==0){
+            cout << "YES" << "\n";
+        }
+        else{
+            bool found=false;
+            f(i,0,(n-1)){
+                if((a[i+1]-a[i])==1){
+                    found=true;
+                    break;
+                }
+            }
+            if(found==true){
+                cout << "YES" << "\n";
+            }
+            else{
+                cout << "NO" << "\n";
+            }
+        }
+    }
+}
+    
+    
