@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+ll binarysearch(ll low,ll high,ll x,ll sum[]){
+    ll ans;
+    ll mid=(low+high)/2;
+    if((high-low)==1) return high;
+    else if(x==sum[mid]) return mid;
+    else if(x<sum[mid]){
+        ans=binarysearch(low,mid,x,sum);
+    }
+    else{
+        ans=binarysearch(mid,high,x,sum);
+    }
+    return ans;
+}
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n;cin >> n;
+    vector<ll> a(n);
+    f(i,0,n) cin >> a[i];
+    ll sum[n];
+    sum[0]=a[0];
+    f(i,1,n){
+        sum[i]=sum[i-1]+a[i];
+    }
+    ll m;cin >> m;
+    while(m--){
+        ll q;cin >> q;
+        if(q<=sum[0]) cout << "1" << '\n';
+        else{
+            cout << binarysearch(0,n-1,q,sum)+1 << '\n';
+            
+        }
+        
+    }
+}
+    
+    
