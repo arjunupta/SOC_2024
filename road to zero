@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main(){
+    ll t;
+    cin >> t;
+    vector<ll> x(t),y(t),a(t),b(t);
+    for(ll i=0;i<t;i++){
+        cin >> x[i] >> y[i];
+        cin >> a[i] >> b[i];
+    }
+    for(ll i=0;i<t;i++){
+        ll p=min(x[i],y[i]);
+        ll q=max(x[i],y[i]);
+        if(b[i]>(2*a[i])){
+            cout << (p+q)*a[i] << "\n";
+        }
+        else{
+            cout << p*b[i]+(q-p)*a[i] << "\n";
+        }
+    }
+    
+}
+
+        
+    
