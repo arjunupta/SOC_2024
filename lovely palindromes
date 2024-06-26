@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    string s;
+    cin >> s;
+    string c=s;
+    reverse(c.begin(),c.end());
+    s=s+c;
+    cout << s << '\n';
+    
+    
+}
