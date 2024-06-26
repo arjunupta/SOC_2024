@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    string a,b;
+    while(t--){
+        cin >> a >> b;
+        char x=a[0];
+        a[0]=b[0];
+        b[0]=x;
+        cout << a << " " << b << "\n";
+        
+    }
+}
