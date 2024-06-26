@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n,s;cin >> n >> s;
+    vector<ll> a(n+1);
+    f(i,1,n+1) cin >> a[i];
+    ll i=0,j=0,x=0,sum=0;
+    while(i<n){
+        while(sum<s){
+            if(i<n) {i++;sum=sum+a[i];}
+            else break;
+        }
+        if(sum>=s){
+            x=x+(n-i+1);
+            sum=sum-a[i]-a[j+1];j++;i--;
+        }
+        
+        
+    }
+    cout << x << '\n';
+    
+}
