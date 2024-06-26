@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,m;cin >> n >> m;
+        string s;cin >> s;
+        vector<ll> a(m);
+        f(i,0,m) cin >> a[i];
+        string c;cin >> c;
+        sort(a.begin(),a.end());
+        sort(c.begin(),c.end());
+        ll k=0;
+        f(i,0,m){
+            if((i<m-1) && a[i]==a[i+1]) k++;
+            else s[a[i]-1]=c[i-k];
+        }
+        cout << s << '\n';
+    }
+}
