@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    ll t;
+    cin >> t;
+    ll n;
+    ll x;
+    vector<ll> a(n);
+    f(i,0,t){
+        cin >> n;
+        f(j,0,n){
+            cin >> a[j];
+        }
+        x=max(a[0],a[1]);
+        f(j,0,n-1){
+            x=min(x,max(a[j],a[j+1]));
+        }
+        cout << (x-1) << "\n";
+        
+    }
+}
