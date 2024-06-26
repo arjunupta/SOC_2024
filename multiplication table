@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main(){
+    ll n,x;
+    cin >> n >> x;
+    ll y=sqrt(x);
+    ll f=0;
+    for(ll i=1;i<=y;i++){
+        if(x%i==0){
+            if(i<=n && (x/i)<=n) f++;
+            
+        }
+    }
+    double z=sqrt(x);
+    if((z-y)==0){
+        if(f==0){
+            cout << 0 << "\n";
+        }
+        else{
+            cout << (2*f-1) << "\n";
+        }
+        
+    }
+    else{
+        cout << 2*f << "\n";
+    }
+    
+    
+}
+
+        
+    
