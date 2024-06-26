@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll n,k;
+    cin >> n >> k;
+    vector<ll> a(n);
+    f(i,0,n){
+        cin >> a[i];
+    }
+    sort(a.begin(),a.end());
+    if(k==0){
+        if(a[0]>=2){
+            cout << (a[0]-1) << "\n";
+        }
+        else{
+            cout << "-1" << "\n";
+        }
+    }
+    else if(k==n){
+        cout << a[n-1]<< "\n";
+    }
+    else if((a[k]-a[k-1])==0){
+        cout << "-1" << "\n";
+    }
+    else{
+        cout << a[k-1] << "\n";
+    }
+    
+}
+    
+    
