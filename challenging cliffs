@@ -1,0 +1,38 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    typedef long long ll;
+    #define f(i,a,b) for(long long i=a;i<b;i++)
+    int main(){
+        ll t;
+        cin >> t;
+        f(i,0,t){
+            ll n;
+            cin >> n;
+            vector<ll> h(n);
+            f(j,0,n){
+                cin >> h[j];
+            }
+            sort(h.begin(),h.end());
+            ll low=h[1]-h[0];
+            ll m=0;
+            f(i,1,n-1){
+                low=min(low,h[i+1]-h[i]);
+                if(((h[i+1]-h[i])-low)==0) m=i;
+            }
+            vector<ll> a;
+            a.push_back(h[m]);
+            f(j,m+2,n){
+                a.push_back(h[j]);
+            }
+            f(j,0,m){
+                a.push_back(h[j]);
+            }
+            a.push_back(h[m+1]);
+            f(j,0,n){
+                cout << a[j] << " ";
+            }
+            cout << "" << "\n";
+        }
+    }
+        
+        
