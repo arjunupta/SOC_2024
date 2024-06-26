@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ll n;
+    cin >> n;
+    vector<ll> a(n);
+    f(i,0,n){
+        cin >> a[i];
+    }
+    f(i,0,n){
+        ll x=sqrt(a[i]);
+        double y=sqrt(a[i]);
+        bool found=false;
+        if(a[i]==1){
+            cout << "NO" << "\n";
+        }
+        else if((y-x)==0){
+            ll z=sqrt(x);
+            f(j,2,(z+1)){
+                if(x%j==0) found=true;
+            }
+            if(found==true){
+                cout << "NO" << "\n";
+            }
+            else{
+                cout << "YES" << "\n";
+            }
+        }
+        else{
+            cout << "NO" << "\n";
+        }
+    }
+}
