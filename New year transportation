@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n,t;cin >> n >>t;
+    vector<ll> a(n);
+    f(i,1,n) cin >> a[i];
+    ll x=1;
+    while(x<t){
+        x=x+a[x];
+        if(x==t){
+            cout << "YES" << '\n';return 0;
+        }
+    }
+    cout << "NO" << '\n';
+}
