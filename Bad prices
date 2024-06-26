@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll t;cin >> t;
+    while(t--){
+        ll n,x=0,low;
+        cin >> n;
+        vector<ll> a(n);
+        f(i,0,n) cin >> a[i];
+        low=a[n-1];
+        for(ll i=n-2;i>=0;i--){
+            if(a[i]>low) x++;
+            else low=a[i];
+        }
+        cout << x << '\n';
+    }
+    
+}
