@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a   ,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll n,s;cin >> n >> s;
+    vector<ll> a(n+1);
+    f(i,1,n+1) cin >> a[i];
+    ll i=0,j=0,x=0,sum=0;
+    while(i<=n){
+        while(sum<=s){
+            i++;
+            if(i<=n) sum=sum+a[i];
+            else break;
+        }
+        x=max(x,i-j-1);
+        if(i<=n) {sum=sum-a[i]-a[j+1];j++;i--;}
+        else break;
+        
+    }
+    cout << x << '\n';
+}
