@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ll t;cin >> t;
+    while(t--){
+        ll n;cin >> n;
+    if(n==1) cout << -1 << '\n';
+    else{
+        f(i,0,n-1) cout << 5;
+        cout << 4 << '\n';
+    }
+        
+    }
+    
+}
