@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll n,a,b;
+    cin >> n >> a >> b;
+    ll x=0;
+    f(i,(a+1),(n+1)){
+        if((n-i)<=b) x++;
+    }
+    cout << x << "\n";
+}
