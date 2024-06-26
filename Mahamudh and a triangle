@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll n;
+    cin >> n;
+    vector<ll> a(n);
+    f(i,0,n){
+        cin >> a[i];
+    }
+    sort(a.begin(),a.end());
+    bool found=false;
+    f(i,0,n-2){
+        if((a[i]+a[i+1])>a[i+2]){
+            found=true;
+            break;
+        }
+    }
+    if(found==true){
+        cout << "YES" << "\n";
+    }
+    else{
+        cout << "NO" << "\n";
+    }
+}
+    
+    
