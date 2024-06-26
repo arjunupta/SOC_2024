@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    ll t, n, m;
+    cin >> t;
+    
+    while (t--) {
+        cin >> n >> m;
+        vector<string> a(n);
+        f(i, 0, n) {
+            cin >> a[i];
+        }
+
+        bool found = false;
+        ll x,y;
+        f(i, 0, n) {
+            if (found) break;
+            f(j, 0, m) {
+                if (a[i][j] == '#') {
+                    x = i;
+                    y = j;
+                    found = true;
+                    break;
+                }
+            }
+        }
+       
+        ll k=1;
+        f(i, x + 1, n) {
+                if (a[i][y] == '#') k++;
+                else break;
+            }
+
+            
+            cout << (x + 1 + (k/2)) << " " << (y + 1 )<< "\n";
+        
+        
+    }
+}
