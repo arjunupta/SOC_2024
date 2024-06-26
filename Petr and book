@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ll n;cin >> n;
+    vector<ll> a(7);
+    f(i,0,7) cin >> a[i];
+    vector<ll> sum(7);
+    sum[0]=a[0];
+    f(i,1,7){
+        sum[i]=sum[i-1]+a[i];
+    }
+    n=n-(n/sum[6])*sum[6];
+    if(n==0){
+        for(ll i=6;i>=0;i--){
+            if(a[i]!=0){
+                cout << i+1 << '\n';
+                return 0;
+            }
+        }
+    }
+    else{
+        ll p=lower_bound(sum.begin(),sum.end(),n)-sum.begin();
+    cout << p+1 << '\n';
+    }
+        
+}
