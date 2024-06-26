@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+#define f(i,a,b) for(long long i=a;i<b;i++)
+int main(){
+    ll t;
+    cin >> t;
+    f(i,0,t){
+        ll n;
+        cin >> n;
+        ll x=(n-1)/2;
+        ll m=0,sum=0;
+        f(i,0,x){
+            m=m+4*(n-(2*i+1));
+            sum=sum+m;
+        }
+        cout << sum << "\n";
+    }
+}
+    
+    
