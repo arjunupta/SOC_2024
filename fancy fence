@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main(){
+    ll t;
+    cin >> t;
+    vector<ll> a(t);
+    for(ll i=0;i<t;i++){
+        cin >> a[i];
+    }
+    for(ll i=0;i<t;i++){
+       double n=360.0/(180-a[i]) ;
+       ll m=360/(180-a[i]);
+       if(n==m){
+           cout << "YES" << "\n";
+       }
+       else{
+           cout << "NO" << "\n";
+       }
+    }
+}
