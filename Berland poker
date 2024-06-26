@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ll t;cin >>t;
+    while(t--){
+        ll n,m,k;cin >> n >> m >> k;
+        if(m<(n/k)) cout << m << '\n';
+        else{
+            ll x=m-(n/k);
+            ll y=x-(x/(k-1))*(k-1);
+            if(y==0) cout << (n/k)-x/(k-1) << '\n';
+            else cout << ((n/k)-x/(k-1))-1 << '\n';
+        }
+            
+    }
+}
