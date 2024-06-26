@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define f(i,a,b) for(ll i=a;i<b;i++)
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    ll q;cin >> q;
+    while(q--){
+        ll a,b,n,s;cin >> a >> b >> n >> s;
+        ll x,y;
+        if((s/n)<=a){
+            x=(s/n);y=s-(s/n)*n;
+        }
+        else{
+            x=a;y=s-n*a;
+        }
+        if(y<=b) cout << "YES" << '\n';
+        else cout << "NO" << '\n';
+    }
+}
